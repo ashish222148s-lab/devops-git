@@ -1,0 +1,22 @@
+git:
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Connection:
+    1-Start the git bash client and setup the following configuration within the Git Bash client.
+        git config --global user.name "ashish"
+        git config --global user.email "ashish222148s@gmail.com"
+        git config --global push.default current
+        git config --global core.autocrlf true
+        git config --global http.sslverify false
+    2-Validate the configuration setting using git config--global -l
+    3-create an .ssh directory to store the key pair, using the following command:	
+        mkdir .ssh
+    4-Generate the key pair using the following command :
+        ssh-keygen -m PEM -t rsa -b 4096 -C "ashish222148s@gmail.com"
+    5-Copy the contents of the ublic key file to configure iton the GitHbto authenticate your git commands.
+        cat /.ssh/id_rsa.pub
+    6-now move on git hub and paste the pubic key in setting gpg and ssh key part.
+
+    7-Test the connectivity between Git and Github
+        ssh -T git@github.com
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
