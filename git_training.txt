@@ -20,3 +20,50 @@ Connection:
         ssh -T git@github.com
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
+mkdir git_practice
+git init
+when we check git status -s here we, will get ??(red) , which tells that there is an untracked files.
+git add filename first time. it will only show A(green) when we run command git status -s
+
+Merging: 
+    1-Fast Forward merge
+    2-Three way merge
+Fast Forward Merge:  In fast forward merge , there will be no any extra commit in master / main branch,  only commit will be done in feature branch.  so while merging, only HEAD will be point to the featcher branch latest commit, no extra commit will be there.
+Three way merge: In three way merge , featurebranch has some extra commit and then main branch has some more commit , so while merge , therewill be one new commit added by combining the main branch(lwhch comes lower) then feature branch and above these two one more commit 
+    will be added.
+
+How to search branch starting with:
+    $ git branch -l feature*
+    feature_chat
+    feature_vedio
+
+Git remote repository:
+    git remote -v 
+    git remote add origin ssh-url
+    (create the ssh key with the command ssh-keygen -t rsa)
+    git remote -v 
+
+    git push origin branch_name_local:branch_name_remote
+
+    Note: both branch(local and remote branch will refer to same commit)
+    if we add any other commit at local, local branch will be one commit ahead.
+
+    If yo want to change the branch name on remote:
+        git push origin feature1:audio-call    #Note: It does not mean that this local branch has bee mapped with remote branch, we just changed the name.
+
+    git branch--will show local branch
+    git branch -r-will show remote branch
+    git branch -a--will show all branch
+    Note: git branch --v --will show which branch is mapped with which branch in remote repository.
+
+VImp: set upstream: while we push he code to remote repo, last time we enter command git push origin master: master
+    but we can set the uptream, git push -u origin master, so local branch master will be mapped with the remote aster branch.
+    Please note that this will only work if he local branch and remote branch have the same name, but will happen if the local and remote branch have the diffrent name.
+    Please check git config --get push.default what is mentioned in this, make it as git config push.default upstream
+
+How to delete from remote repo using commna line:
+    git push origin --delete brach_name 
+
+
+
+
