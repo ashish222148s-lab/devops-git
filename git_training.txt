@@ -67,10 +67,37 @@ How to delete from remote repo using commna line:
 
 
 Git tag:
-    git tag v1.0
-
-    how topush tag to the github:
-        git push origin v1.0
-        for multiple tag
-        git push origin --tag
         
+There are two types of tags :
+    1-Lightweight tags
+    2-Annotated tags
+
+    1-Lightweight tags
+        git tag v1.0
+
+        how topush tag to the github:
+            git push origin v1.0
+            for multiple tag
+            git push origin --tag
+
+        We can check Lightweight tag with comand , 
+            git show tagname
+        
+    2-Annotated Tags:
+
+        git tag -a v10.0 -m "this is annotated tag"
+        
+How to delete tags:
+    git tag
+    git tag -d v1.0
+How to delete from remote branch:
+    git push origin -d v10.0 
+
+Note: If you want to tag with perticular commit:
+    git tag v.10 commitid
+How to  move tag :
+    git tag -f v2.0 commitid
+    
+
+
+
