@@ -57,7 +57,7 @@ Git remote repository:
     Note: git branch --v --will show which branch is mapped with which branch in remote repository.
 
 VImp: set upstream: while we push he code to remote repo, last time we enter command git push origin master: master
-    but we can set the uptream, git push -u origin master, so local branch master will be mapped with the remote aster branch.
+    but we can set the uptream, git push -u origin master, so local branch master will be mapped with the remote master branch.
     Please note that this will only work if he local branch and remote branch have the same name, but will happen if the local and remote branch have the diffrent name.
     Please check git config --get push.default what is mentioned in this, make it as git config push.default upstream
 
