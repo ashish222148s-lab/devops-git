@@ -66,4 +66,11 @@ How to delete from remote repo using commna line:
 
 
 
+Git tag:
+    git tag v1.0
 
+    how topush tag to the github:
+        git push origin v1.0
+        for multiple tag
+        git push origin --tag
+        
